@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/vinyl_record"
+        android:scaleType="fitXY"
+        android:id="@+id/simpleimage" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/colorAccent"
+        android:text="Hello"
+        android:id="@+id/showplaylistname"
+        android:layout_toRightOf="@+id/simpleimage"
+        android:layout_marginLeft="15dp"
+        android:layout_centerVertical="true" />
+</RelativeLayout>

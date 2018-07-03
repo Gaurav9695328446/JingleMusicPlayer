@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/r1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#353739"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/playimage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_headphones"
+            android:padding="4dp" />
+
+        <TextView
+            android:id="@+id/playTitle"
+            android:layout_width="match_parent"
+            android:textColor="#9BBB59"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/playimage"
+            android:text="Song Title"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+            android:textSize="20dp"
+
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/playcount"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/playTitle"
+            android:layout_marginLeft="20dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/playimage"
+            android:text="Song Artist"
+            android:textStyle="italic"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:id="@+id/playlistItemSong" />
+</LinearLayout>

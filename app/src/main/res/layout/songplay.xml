@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#000000"
+    tools:context="com.example.suneel.musicapp.Activities.SongPlay">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".8"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                android:id="@+id/SongImage"
+                android:layout_below="@+id/dname" />
+
+            <me.itangqi.waveloadingview.WaveLoadingView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:id="@+id/waveloading"
+                app:wlv_borderColor="@color/colorAccent"
+                app:wlv_borderWidth="3dp"
+                app:wlv_shapeType="circle"
+                app:wlv_round_rectangle="true"
+                app:wlv_triangle_direction="north"
+                app:wlv_titleCenterStrokeColor="@android:color/holo_blue_dark"
+                app:wlv_titleCenterStrokeWidth="3dp"
+                app:wlv_titleCenterColor="@color/white"
+                app:wlv_titleCenterSize="24sp"
+                app:wlv_titleTopStrokeColor="@android:color/holo_blue_dark"
+                app:wlv_titleTopStrokeWidth="3dp"
+                app:wlv_titleTopColor="@color/white"
+                app:wlv_titleTopSize="24sp"
+                app:wlv_titleBottomStrokeColor="@android:color/holo_blue_dark"
+                app:wlv_titleBottomStrokeWidth="3dp"
+                app:wlv_titleBottomColor="@color/white"
+                app:wlv_titleBottomSize="24sp"
+                android:layout_gravity="center"
+                app:wlv_waveColor="#99e9d758" />
+
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:textSize="22dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="5dp"
+            android:maxLines="2"
+            android:textStyle="bold"
+            android:textColor="#e9d758"
+            android:id="@+id/dname"
+            android:text="Hello"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="16dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:maxLines="2"
+            android:layout_below="@+id/SongImage"
+            android:text="unknown"
+            android:textColor="#FF0699A2"
+            android:textStyle="italic"
+            android:id="@+id/dartist" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".2"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/r2"
+            android:background="#000000"
+            android:layout_below="@id/dartist">
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:id="@+id/Songrun" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="#ffffff"
+                android:id="@+id/start"
+                android:layout_marginLeft="8dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/Songrun" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="#ffffff"
+                android:id="@+id/end"
+                android:layout_marginRight="8dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/Songrun" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_below="@id/r2"
+            android:background="#000000"
+            android:layout_alignParentBottom="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/Repeat"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/ic_repeat" />
+
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/BackBtn"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/ic_back" />
+
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/PlayBtn"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/ic_play" />
+
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/FwdBtn"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/ic_forward" />
+
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/Shuffle"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/ic_shuffle" />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

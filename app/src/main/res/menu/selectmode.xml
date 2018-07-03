@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:mContext="com.example.suneel.musicapp.Activities.MainActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/okbtn"
+        android:title="OK"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/canbtn"
+        android:title="CANCEL"
+        app:showAsAction="always" />
+
+
+</menu>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.suneel.musicapp">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <permission android:name="android.permission.MEDIA_CONTENT_CONTROL" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <permission android:name="android.permission.MEDIA_CONTENT_CONTROL" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_headphones"
+        android:logo="@drawable/ic_headphones"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@drawable/ic_headphones"
+        android:supportsRtl="true"
+        android:theme="@style/MyMaterialTheme">
+        <activity android:name=".Activities.MainActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".Activities.Youtube"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.SongPlay"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.VoiceSearchClass"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.PlalistItem"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.splashscreen"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activities.YoutubePlay"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".Activities.VideoPlay"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.ArtistItem"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".Activities.AlbumItem"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.GenresItem"
+            android:screenOrientation="portrait"/>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_path" />
+        </provider>
+
+        <service android:name=".Services.MusicService" />
+
+        <receiver android:name=".receiver.Getdata">
+            <intent-filter>
+                <action android:name="com.example.suneel.musicapp.Services.ACTION_PLAY"></action>
+                <action android:name="com.example.suneel.musicapp.Services.ACTION_PAUSE"></action>
+                <action android:name="com.example.suneel.musicapp.Services.ACTION_PREVIOUS"></action>
+                <action android:name="com.example.suneel.musicapp.Services.ACTION_NEXT"></action>
+                <action android:name="com.example.suneel.musicapp.Services.ACTION_CANCEL"></action>
+                <action android:name="com.example.suneel.musicapp.Services.RECEIVER"></action>
+            </intent-filter>
+        </receiver>
+        <service android:name=".Services.MusicService"></service>
+
+        <activity android:name=".Activities.BaseActivity"
+            android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>

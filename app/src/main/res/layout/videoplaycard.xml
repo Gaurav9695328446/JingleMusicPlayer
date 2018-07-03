@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:layout_margin="5dp">
+
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:id="@+id/videoimage" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/playlistid"
+        android:layout_toRightOf="@+id/videoimage" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/videoname"
+        android:layout_below="@+id/playlistid"
+        android:textSize="15sp"
+        android:paddingLeft="10dp"
+        android:text="2018-05-09T18:27:03.000Z"
+        android:layout_toRightOf="@+id/videoimage" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/videoid"
+        android:layout_below="@+id/videoname"
+        android:layout_toRightOf="@+id/videoimage" />
+
+</RelativeLayout>

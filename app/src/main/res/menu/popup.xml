@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/share"
+        android:title="@string/share"
+        app:actionProviderClass="android.widget.ShareActionProvider" />
+
+    <item
+        android:id="@+id/addtoplaylist"
+        android:title="@string/addtoplaylist"
+        app:actionProviderClass="android.widget.ShareActionProvider" />
+
+    <item
+        android:id="@+id/remove"
+        android:title="@string/remove"
+        app:actionProviderClass="android.widget.ShareActionProvider" />
+    <!--app:showAsAction="always"-->
+</menu>
